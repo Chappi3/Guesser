@@ -110,4 +110,14 @@ public class Guesser{
         return "low: " + low + " high: " + high;
     }
 
+    private String readLine(){
+        // If there is no System console, use a scanner
+        if(System.console() == null){
+            return new java.util.Scanner(System.in).nextLine();
+        }else{
+            // there was a System console, so we can use it
+            return System.console().readLine();
+        }
+    }
+
 }
