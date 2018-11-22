@@ -70,7 +70,7 @@ public class Guesser{
         // write an error message, and read a new reply.
         // When you have gotten a valid reply, return it.
         reply = readLine();
-        while (reply == null && !reply.equalsIgnoreCase("T") && !reply.equalsIgnoreCase("F")) {
+        while (reply == null || !reply.equalsIgnoreCase("T") && !reply.equalsIgnoreCase("F")) {
             System.out.println("please answer T or F");
             reply = readLine();
         }
